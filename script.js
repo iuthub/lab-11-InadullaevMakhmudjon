@@ -2,7 +2,8 @@
 const elements = {
 	textarea: document.getElementById('textarea'),
 	biggerbtn: document.getElementById('button'),
-	checkbox: document.getElementById('checkbox')
+	checkbox: document.getElementById('checkbox'),
+	snoopfy: document.getElementById('snoopfy')
 };
 
 
@@ -20,4 +21,11 @@ elements.biggerbtn.onclick = ()=>{
 
 	}
 	elements.textarea.style.fontSize = '24pt';
+}
+
+elements.snoopfy.onclick = ()=>{
+	const wholeText = elements.textarea.value;
+		const splitted = wholeText.split('.');
+		const newValue = splitted.join('-izzle.');
+		elements.textarea.value = newValue;	
 }
